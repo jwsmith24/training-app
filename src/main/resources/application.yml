@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: "training-app"
+
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: training-bff
+            client-secret: h8anyzhRqHPyzibq4lzQnkVxq7dL0oZ3
+            scope: openid,profile,email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8081/realms/training-app
