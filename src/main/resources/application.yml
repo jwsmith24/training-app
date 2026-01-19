@@ -13,3 +13,6 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://localhost:8081/realms/training-app
+
+server:
+  forward-headers-strategy: framework
