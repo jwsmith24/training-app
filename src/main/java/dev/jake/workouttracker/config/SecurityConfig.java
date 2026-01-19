@@ -23,7 +23,7 @@ public class SecurityConfig {
                 )
                 .exceptionHandling(ex -> ex
                         .defaultAuthenticationEntryPointFor(
-                                new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
+                                new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED), // 401
                                 request -> request.getRequestURI().startsWith("/api/"))
                 )
                 .oauth2Login(login -> login.defaultSuccessUrl("/", true))
