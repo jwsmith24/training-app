@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import {Toaster} from "sonner";
 
 const media = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -16,6 +17,7 @@ media.addEventListener("change", apply); // update theme on preference change
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+      <App/>
+      <Toaster position={"bottom-center"} richColors/>
   </StrictMode>,
 )
