@@ -2,13 +2,24 @@ spring:
   application:
     name: "training-app"
 
+  datasource:
+    url: jdbc:postgresql://localhost:5433/training
+    username: training
+    password: training
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
   security:
     oauth2:
       client:
         registration:
           keycloak:
-            client-id: training-bff
-            client-secret: h8anyzhRqHPyzibq4lzQnkVxq7dL0oZ3
+            client-id: training-app
+            client-secret: qqSc86f3hYBhsQdCk4V7cTMv3DcJ4YxO
             scope: openid,profile,email
         provider:
           keycloak:

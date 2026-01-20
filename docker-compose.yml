@@ -8,3 +8,22 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+
+  postgres:
+    image: postgres:16
+    container_name: training-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: training
+      POSTGRES_USER: training
+      POSTGRES_PASSWORD: training
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+  keycloak_data:

@@ -48,8 +48,8 @@ export default function LogLiftView() {
         <div className={"p-4"}>
             <Card className={"max-w-2/3"}>
                 <CardHeader>
-                    <CardTitle>Log Lift</CardTitle>
-                    <CardDescription>Log your working sets for the day</CardDescription>
+                    <CardTitle>Log Workout</CardTitle>
+                    <CardDescription>Log working sets for the day.</CardDescription>
 
                 </CardHeader>
                 <CardContent>
